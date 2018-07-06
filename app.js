@@ -79,7 +79,7 @@ search_trigger.addEventListener("click", function() {
 });
 
 document.querySelector('#back').addEventListener("click", function() {
-  popUp();
+  setTimeout(popUp, 350)
   document.querySelector('#result').style.opacity = "0";
   document.querySelector('#result').style.display = "none";
   document.querySelector('#back').style.opacity = "0";
