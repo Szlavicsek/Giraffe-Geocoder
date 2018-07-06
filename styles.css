@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+:root {
+  --anim-duration: 1s;
+  --anim-horn: 0.4s;
+  --input-bgc: #EC9C8E;
+  --searchicon-bgc: rgba(0, 0, 0, 0.4)
+}
+
+*::selection {
+  background-color: transparent;
+}
+
+body {
+  background: linear-gradient(#FFF59B, #F3C668);
+  transition: 1s ease all;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  -webkit-backface-visibility: hidden;
+  z-index: 1;
+  margin: 0;
+  padding: 0 text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*************** searchbar styles on startscreen BEGIN ***************/
+
+.searchbar-wrapper {
+  position: absolute;
+  width: 10vh;
+  height: 10vh;
+  top: -100px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--input-bgc);
+  border-radius: 50px;
+  transition: width 0.8s, top .7s;
+}
+
+/*     left side/input     */
+
+.searchbar-wrapper input {
+  position: absolute;
+  color: white;
+  background-color: transparent;
+  height: 100%;
+  width: calc(100% - 120px);
+  outline: 0;
+  border: 0;
+  margin-left: 40px;
+  font-size: 2rem;
+}
+
+input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.4)
+}
+
+input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.4)
+}
+
+input::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.4)
+}
+
+.searchbar-wrapper input::selection {
+  background-color: lightblue;
+}
+
+/*     right side/search button     */
+
+.search-icon {
+  position: relative;
+  height: 100%;
+  float: right;
+  background-color: var(--searchicon-bgc);
+  border-radius: 50px;
+  transition: 0.15s;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+.search-icon:hover {
+  background-color: #fff;
+}
+
+.search-icon:active {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+svg {
+  fill: white;
+  transform: scale(0.6);
+}
+
+.search-icon:hover>svg {
+  fill: #8E5E55
+}
+
+/*     city suggestion list dropdown     */
+
+.pac-container {
+  background-color: rgb(255, 255, 255, 0.2);
+}
+
+.pac-container div {
+  height: 2.2rem;
+  border-top: 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.pac-container div:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/*************** searchbar styles on startscreen END ***************/
+
+/*********************** giraffe styles BEGIN ***********************/
+
+/*     giraffe container     */
+
+.giraffe {
+  position: absolute;
+  bottom: -450px;
+  height: 340px;
+  width: 150px;
+  left: 35%;
+  transform-origin: bottom;
+  transform: scale(1.25);
+  z-index: 10;
+}
+
+.giraffe-popup {
+  -moz-animation: giraffe-popup var(--anim-duration);
+  -webkit-animation: giraffe-popup var(--anim-duration);
+  animation: giraffe-popup var(--anim-duration);
+}
+
+.giraffe-sinks {
+  -moz-animation: giraffe-sinks var(--anim-duration);
+  -webkit-animation: giraffe-sinks var(--anim-duration);
+  animation: giraffe-sinks var(--anim-duration);
+}
+
+/*     giraffe body     */
+
+.giraffe-body {
+  position: absolute;
+  top: 50px;
+  height: 300px;
+  z-index: 3;
+}
+
+/*     giraffe head     */
+
+.giraffe-head {
+  width: 70px;
+  position: absolute;
+  top: 30px;
+  left: 70px;
+  z-index: 5;
+}
+
+.giraffe-head-popup {
+  -moz-animation: giraffe-head-popup var(--anim-duration);
+  -webkit-animation: giraffe-head-popup var(--anim-duration);
+  animation: giraffe-head-popup var(--anim-duration);
+}
+
+.giraffe-head-sinks {
+  -moz-animation: giraffe-head-sinks var(--anim-duration);
+  -webkit-animation: giraffe-head-sinks var(--anim-duration);
+  animation: giraffe-head-sinks var(--anim-duration);
+}
+
+/*     ear     */
+
+.giraffe-ear {
+  position: absolute;
+  display: inline-block;
+  left: 58px;
+  top: 40px;
+  width: 25px;
+  z-index: 1
+}
+
+.ear-popup {
+  -moz-animation: ear-popup var(--anim-duration);
+  -webkit-animation: ear-popup var(--anim-duration);
+  animation: ear-popup var(--anim-duration);
+}
+
+.ear-loop {
+  -moz-animation: ear-loop 8.37s infinite;
+  -webkit-animation: ear-loop 8.37s infinite;
+  animation: ear-loop 8.37s infinite;
+  animation-delay: -1s;
+}
+
+/*     horns     */
+
+.horn {
+  position: absolute;
+  height: 22px;
+  top: 35px;
+  transform-origin: left;
+}
+
+#horn1 {
+  left: 78px;
+}
+
+#horn2 {
+  left: 87px;
+}
+
+.giraffe-horn1-popup {
+  -moz-animation: horn-popup var(--anim-horn);
+  -webkit-animation: horn-popup var(--anim-horn);
+  animation: horn-popup var(--anim-horn);
+  animation-delay: 0.6s;
+}
+
+.giraffe-horn2-popup {
+  -moz-animation: horn-popup var(--anim-horn);
+  -webkit-animation: horn-popup var(--anim-horn);
+  animation: horn-popup var(--anim-horn);
+  animation-delay: 0.7s;
+}
+
+.horn-loop {
+  -moz-animation: horn-loop 5s infinite;
+  -webkit-animation: horn-loop 5s infinite;
+  animation: horn-loop 5s infinite;
+  animation-delay: -1s
+}
+
+/*********************** giraffe styles END ***********************/
+
+/******************** resultbox BEGIN *********************/
+
+#result {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: .5s ease;
+}
+
+#result p {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+/*********************** resultbox END ***********************/
+
+/******************** back button BEGIN *********************/
+
+#back {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 15vh;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  background-color: olive;
+  color: white;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: 0.5s ease;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+/*********************** back button END ***********************/
+
+/******************** giraffe keyframes BEGIN *********************/
+
+/*     popups     */
+
+@keyframes giraffe-popup {
+  0% {
+    transform: translateY(450px) scale(1.25);
+  }
+  70% {
+    transform: translateY(-10px)scale(1.25);
+  }
+  100% {
+    transform: translateY(0px) scale(1.25);
+  }
+}
+
+@keyframes giraffe-head-popup {
+  0% {
+    transform: rotateZ(0deg)
+  }
+  30% {
+    transform: rotateZ(40deg)
+  }
+  80% {
+    transform: rotateZ(-20deg)
+  }
+  100% {
+    transform: rotateZ(0deg)
+  }
+}
+
+@keyframes ear-popup {
+  0% {
+    /*transform-oringin: right*/
+    transform: rotateZ(-10deg)
+  }
+  30% {
+    transform: rotateZ(-40deg)
+  }
+  80% {
+    transform: rotateZ(10deg)
+  }
+  100% {
+    transform: rotateZ(0deg)
+  }
+}
+
+@keyframes horn-popup {
+  0% {
+    top: 35px;
+  }
+  70% {
+    transform: scale(1.4);
+  }
+  85% {
+    top: 25px transform: scale(0.85);
+  }
+  100% {
+    top: 20px;
+    transform: scale(1);
+  }
+}
+
+/*     sinks     */
+
+@keyframes giraffe-sinks {
+  20% {
+    transform: translateY(-10px) scale(1.25);
+  }
+  100% {
+    transform: translateY(450px) scale(1.25);
+  }
+}
+
+@keyframes giraffe-head-sinks {
+  20% {
+    transform: rotateZ(10deg)
+  }
+  60% {
+    transform: rotateZ(-30deg)
+  }
+  100% {
+    transform: rotateZ(0deg)
+  }
+}
+
+/*     loops     */
+
+@keyframes horn-loop {
+  0% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1);
+  }
+  92% {
+    transform: translate(2%) scale(0.9);
+  }
+  93% {
+    transform: translate(-12%) scale(1.5);
+  }
+  95% {
+    transform: translate(2%) scale(0.9);
+  }
+  97% {
+    transform: translate(-2%) scale(1.1);
+  }
+  100% {
+    transform: translate(0%) scale(1);
+  }
+}
+
+@keyframes ear-loop {
+  0% {
+    transform-origin: center right;
+    transform: rotateZ(0deg)
+  }
+  94% {
+    transform-origin: center right;
+    transform: rotateZ(0deg)
+  }
+  95.5% {
+    transform-origin: center right;
+    transform: rotateZ(40deg)
+  }
+  97% {
+    transform-origin: center right;
+    transform: rotateZ(-15deg)
+  }
+  98% {
+    transform-origin: center right;
+    transform: rotateZ(20deg)
+  }
+  99% {
+    transform-origin: center right;
+    transform: rotateZ(-5deg)
+  }
+  100% {
+    transform-origin: center right;
+    transform: rotateZ(0deg)
+  }
+}
+
+/********************* giraffe keyframes END ************************/
+
+/********************* media queries BEGIN ************************/
+
+@media only screen and (min-width: 577px) {
+  .giraffe {
+    left: 40%
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .giraffe {
+    left: 45%
+  }
+}
