@@ -81,6 +81,7 @@ search_trigger.addEventListener("click", function() {
 document.querySelector('#back').addEventListener("click", function() {
   popUp();
   document.querySelector('#result').style.opacity = "0";
+  document.querySelector('#result').style.display = "none";
   document.querySelector('#back').style.opacity = "0";
   document.querySelector('#my-address').value = "";
   document.querySelector('#my-address').focus();

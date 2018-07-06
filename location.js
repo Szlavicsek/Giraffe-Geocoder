@@ -26,9 +26,11 @@ function codeAddress() {
     'address': address
   }, function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
-      document.querySelector('#result').style.opacity = "1";
       document.querySelector("#lat").innerText = "Latitude: " + results[0].geometry.location.lat().toFixed(5);
       document.querySelector("#lng").innerText = "Longitude: " + results[0].geometry.location.lng().toFixed(5);
+      setTimeout(function() {
+        document.querySelector('#result').style.display = "block";
+      }, 1000)
       console.log("Latitude: " + results[0].geometry.location.lat());
       console.log("Longitude: " + results[0].geometry.location.lng());
     } else {
