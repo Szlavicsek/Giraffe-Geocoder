@@ -75,6 +75,7 @@ function giraffeGoesDown() {
 
 document.addEventListener('readystatechange', event => {
   if (event.target.readyState === "complete") {
+    search_icon.style.display = "block";
     popUp();
   };
 });
@@ -89,5 +90,7 @@ document.querySelector('#back').addEventListener("click", function() {
   document.querySelector('#result').style.display = "none";
   document.querySelector('#back').style.opacity = "0";
   document.querySelector('#my-address').value = "";
-  document.querySelector('#my-address').focus();
+  setTimeout(function() {
+    document.querySelector('#my-address').focus();
+  }, 1000)
 })
