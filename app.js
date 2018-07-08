@@ -67,11 +67,11 @@ function giraffeGoesDown() {
 
 // EVENT LISTENERS
 
-// window.addEventListener("resize", function() {
-//   search_icon.style.width = `${search_icon.offsetHeight}px`;
-//   giraffe_container.style.transform = `scale(${(Math.floor(window.innerHeight / 1.517)/340).toFixed(2)})`;
-//   console.log(document.querySelector('.test').style.height);
-// })
+window.addEventListener("resize", function() {
+  search_icon.style.width = `${search_icon.offsetHeight}px`;
+  // giraffe_container.style.transform = `scale(${(Math.floor(window.innerHeight / 1.517)/340).toFixed(2)})`;
+  // console.log(document.querySelector('.test').style.height);
+})
 
 document.addEventListener('readystatechange', event => {
   if (event.target.readyState === "complete") {

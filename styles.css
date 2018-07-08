@@ -39,16 +39,14 @@ body {
 
 .searchbar-wrapper input {
   position: absolute;
+  height: calc(10vh - 2px);
   color: white;
   background-color: transparent;
-  top: 50%;
-  transform: translateY(-50%);
   width: calc(100% - 120px);
   outline: 0;
   border: 0;
   margin-left: 40px;
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: 5vh;
 }
 
 input::-webkit-input-placeholder {
@@ -78,7 +76,7 @@ input::-ms-input-placeholder {
   border-radius: 50px;
   transition: 0.15s;
   cursor: pointer;
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .search-icon:hover {
@@ -129,7 +127,6 @@ svg {
   transform-origin: bottom;
   transform: scale(1.25);
   z-index: 1;
-  background-color: green;
 }
 
 .giraffe-popup {
@@ -151,7 +148,6 @@ svg {
   top: 50px;
   height: 300px;
   z-index: 2;
-  background-color: red;
 }
 
 /*     giraffe head     */
