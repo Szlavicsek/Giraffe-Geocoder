@@ -3,7 +3,7 @@
   --anim-duration: 1s;
   --anim-horn: 0.4s;
   --input-bgc: #EC9C8E;
-  --searchicon-bgc: rgba(0, 0, 0, 0.4)
+  --searchicon-bgc: rgba(0, 0, 0, 0.4);
 }
 
 *::selection {
@@ -204,7 +204,6 @@ svg {
 .horn {
   position: absolute;
   height: 22px;
-  top: 35px;
   transform-origin: left;
 }
 
@@ -291,7 +290,7 @@ svg {
     transform: translateY(450px) scale(1.25);
   }
   70% {
-    transform: translateY(-10px)scale(1.25);
+    transform: translateY(-10px) scale(1.25);
   }
   100% {
     transform: translateY(0px) scale(1.25);

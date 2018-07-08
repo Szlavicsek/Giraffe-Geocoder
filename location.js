@@ -1,5 +1,5 @@
 function initialize() {
-  var address = (document.getElementById('my-address'));
+  var address = document.getElementById('my-address');
   var autocomplete = new google.maps.places.Autocomplete(address);
   autocomplete.setTypes(['geocode']);
   google.maps.event.addListener(autocomplete, 'place_changed', function() {
@@ -26,17 +26,21 @@ function codeAddress() {
     'address': address
   }, function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
+
       document.querySelector("#lat").innerText = "Latitude: " + results[0].geometry.location.lat().toFixed(5);
+
       document.querySelector("#lng").innerText = "Longitude: " + results[0].geometry.location.lng().toFixed(5);
+
+      giraffeGoesDown();
+
       setTimeout(function() {
         document.querySelector('#result').style.display = "block";
       }, 1000)
-      console.log("Latitude: " + results[0].geometry.location.lat());
-      console.log("Longitude: " + results[0].geometry.location.lng());
+
     } else {
+
       $("#lat").innerText = "Geocode was not successful for the following reason: " + status;
       console.log("Geocode was not successful for the following reason: " + status);
     }
   });
 }
-google.maps.event.addDomListener(window, 'load', initialize);
