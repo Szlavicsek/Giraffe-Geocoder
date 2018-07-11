@@ -16,7 +16,6 @@ $('body').css('height', $(window).height() + 'px');
 // GIRAFFE POPS UP
 
 let popUp = function() {
-  input_field.focus();
   searchbar.style.top = "10vh";
   giraffe_container.classList.add("giraffe-popup");
   giraffe_container.style.bottom = "0px";
@@ -37,6 +36,7 @@ let popUp = function() {
   }, 900);
 
   setTimeout(function() {
+    input_field.focus();
     giraffe_container.classList.remove("giraffe-popup");
     giraffe_head.classList.remove("giraffe-head-popup");
     giraffe_horn2.style.top = "20px";
@@ -86,7 +86,9 @@ document.addEventListener('readystatechange', event => {
 });
 
 search_trigger.addEventListener("click", function() {
-  codeAddress()
+  if (input_field.value !== "") {
+    codeAddress()
+  }
 });
 
 document.querySelector('#back').addEventListener("click", function() {

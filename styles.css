@@ -65,6 +65,11 @@ body {
   border: 0;
   margin-left: 40px;
   font-size: 2rem;
+  height: 3rem;
+}
+
+.searchbar-wrapper input:focus {
+  border-bottom: 1px solid blue;
 }
 
 input::-webkit-input-placeholder {
@@ -96,6 +101,10 @@ input::-ms-input-placeholder {
   transition: 0.15s;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+}
+
+.search-icon::after {
+  clear: both;
 }
 
 .search-icon:hover {
