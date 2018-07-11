@@ -11,7 +11,7 @@ const input_field = document.querySelector('#my-address');
 const error_container = document.querySelector('.error_container');
 const result_El = document.querySelector('#result');
 $('body').css('height', $(window).height() + 'px');
-document.querySelector('#my-address').value = $(window).height() + 'px'
+document.querySelector('#my-address').value = $(window).height() + 'px, ih: ' + window.innerHeight
 $('.searchbar-wrapper').css('height', $(window).height() / 10 + 'px');
 
 // GIRAFFE POPS UP
