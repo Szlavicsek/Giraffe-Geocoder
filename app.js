@@ -10,15 +10,17 @@ const search_icon = document.querySelector('.search-icon');
 const input_field = document.querySelector('#my-address');
 const error_container = document.querySelector('.error_container');
 const result_El = document.querySelector('#result');
-// $('body').css('height', $(window).height() + 'px');
-document.querySelector('#my-address').value = screen.height + ' px, ih: ' + window.innerHeight
-// $('.searchbar-wrapper').css('height', $(window).height() / 10 + 'px');
+
+$('body').css('height', $(window).height() + 'px');
+document.querySelector('#my-address').value = window.innerWidth;
+window.addEventListener("resize", function() {
+  document.querySelector('#my-address').value = window.innerWidth;
+})
 
 // GIRAFFE POPS UP
 
 let popUp = function() {
   searchbar.style.top = "10vh";
-  search_icon.style.width = `${search_icon.offsetHeight}px`;
   giraffe_container.classList.add("giraffe-popup");
   giraffe_container.style.bottom = "0px";
   giraffe_head.classList.add("giraffe-head-popup");
@@ -61,7 +63,13 @@ function giraffeGoesDown() {
   }, 600);
 
   setTimeout(function() {
-    giraffe_container.style.bottom = "-450px";
+    if (window.innerHeight > 1280) {
+      giraffe_container.style.bottom = "-800px";
+    } else if (window.innerHeight > 960) {
+      giraffe_container.style.bottom = "-600px";
+    } else {
+      giraffe_container.style.bottom = "-450px";
+    }
     giraffe_container.classList.remove("giraffe-sinks");
     giraffe_head.classList.remove("giraffe-head-sinks");
     giraffe_horn1.classList.remove("horn-loop");
