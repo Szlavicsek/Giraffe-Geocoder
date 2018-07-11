@@ -12,14 +12,11 @@ const error_container = document.querySelector('.error_container');
 const result_El = document.querySelector('#result');
 
 $('body').css('height', $(window).height() + 'px');
-document.querySelector('#my-address').value = window.innerWidth;
-window.addEventListener("resize", function() {
-  document.querySelector('#my-address').value = window.innerWidth;
-})
 
 // GIRAFFE POPS UP
 
 let popUp = function() {
+  input_field.focus();
   searchbar.style.top = "10vh";
   giraffe_container.classList.add("giraffe-popup");
   giraffe_container.style.bottom = "0px";
