@@ -15,6 +15,7 @@ body {
   transition: 1s ease all;
   overflow: hidden;
   width: 100vw;
+  height: 100vh;
   position: relative;
   margin: 0;
   padding: 0;
@@ -42,6 +43,7 @@ body {
 .searchbar-wrapper {
   position: absolute;
   width: 10vh;
+  height: 10vh;
   top: -100px;
   left: 50%;
   transform: translate(-50%, -50%);
