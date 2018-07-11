@@ -7,7 +7,11 @@ const doc_body = document.querySelector('body');
 const search_trigger = document.querySelector('.trigger');
 const searchbar = document.querySelector('.searchbar-wrapper');
 const search_icon = document.querySelector('.search-icon');
-
+const input_field = document.querySelector('#my-address');
+const error_container = document.querySelector('.error_container');
+const result_El = document.querySelector('#result');
+$('body').css('height', $(window).height() + 'px');
+$('.searchbar-wrapper').css('height', $(window).height() / 10 + 'px');
 // GIRAFFE POPS UP
 
 let popUp = function() {
@@ -60,18 +64,12 @@ function giraffeGoesDown() {
     giraffe_head.classList.remove("giraffe-head-sinks");
     giraffe_horn1.classList.remove("horn-loop");
     giraffe_horn2.classList.remove("horn-loop");
-    document.querySelector('#result').style.opacity = "1";
+    result_El.style.opacity = "1";
     document.querySelector('#back').style.opacity = "1"
   }, 950);
 };
 
 // EVENT LISTENERS
-
-window.addEventListener("resize", function() {
-  search_icon.style.width = `${search_icon.offsetHeight}px`;
-  // giraffe_container.style.transform = `scale(${(Math.floor(window.innerHeight / 1.517)/340).toFixed(2)})`;
-  // console.log(document.querySelector('.test').style.height);
-})
 
 document.addEventListener('readystatechange', event => {
   if (event.target.readyState === "complete") {
@@ -86,11 +84,11 @@ search_trigger.addEventListener("click", function() {
 
 document.querySelector('#back').addEventListener("click", function() {
   setTimeout(popUp, 350)
-  document.querySelector('#result').style.opacity = "0";
-  document.querySelector('#result').style.display = "none";
+  result_El.style.opacity = "0";
+  result_El.style.display = "none";
   document.querySelector('#back').style.opacity = "0";
-  document.querySelector('#my-address').value = "";
+  input_field.value = "";
   setTimeout(function() {
-    document.querySelector('#my-address').focus();
+    input_field.focus();
   }, 1000)
 })

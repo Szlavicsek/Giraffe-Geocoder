@@ -34,12 +34,18 @@ function codeAddress() {
       giraffeGoesDown();
 
       setTimeout(function() {
-        document.querySelector('#result').style.display = "block";
+        result_El.style.display = "block";
       }, 1000)
 
     } else {
-
-      $("#lat").innerText = "Geocode was not successful for the following reason: " + status;
+      searchbar.style.border = "2px solid red";
+      document.querySelector('.error_message').innerText = `${input_field.value} not found`;
+      error_container.style.top = "0px";
+      input_field.select();
+      setTimeout(function() {
+        searchbar.style.border = "0";
+        error_container.style.top = "-30px"
+      }, 3000)
       console.log("Geocode was not successful for the following reason: " + status);
     }
   });
