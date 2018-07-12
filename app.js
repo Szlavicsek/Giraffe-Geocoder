@@ -12,7 +12,6 @@ const error_container = document.querySelector('.error_container');
 const result_El = document.querySelector('#result');
 
 $('body').css('height', $(window).height() + 'px');
-input_field.value = window.innerHeight + "px ";
 
 // GIRAFFE POPS UP
 
