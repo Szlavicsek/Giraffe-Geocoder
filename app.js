@@ -65,8 +65,10 @@ function giraffeGoesDown() {
       giraffe_container.style.bottom = "-800px";
     } else if (window.innerHeight > 960) {
       giraffe_container.style.bottom = "-600px";
-    } else {
+    } else if (window.innerHeight < 960 && window.innerHeight > 600) {
       giraffe_container.style.bottom = "-450px";
+    } else {
+      giraffe_container.style.bottom = "-400px";
     }
     giraffe_container.classList.remove("giraffe-sinks");
     giraffe_head.classList.remove("giraffe-head-sinks");
