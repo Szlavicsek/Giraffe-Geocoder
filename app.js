@@ -2,6 +2,7 @@ const giraffe_horn1 = document.querySelector('#horn1');
 const giraffe_horn2 = document.querySelector('#horn2');
 const giraffe_ear = document.querySelector('.giraffe-ear');
 const giraffe_head = document.querySelector('.giraffe-head');
+const giraffe_body = document.querySelector('.giraffe-body');
 const giraffe_container = document.querySelector('.giraffe');
 const doc_body = document.querySelector('body');
 const search_trigger = document.querySelector('.trigger');
@@ -17,12 +18,13 @@ $('body').css('height', $(window).height() + 'px');
 
 let popUp = function() {
   searchbar.style.top = "10vh";
-  giraffe_container.classList.add("giraffe-popup");
+  // giraffe_container.classList.add("giraffe-popup");
   giraffe_container.style.bottom = "0px";
+  giraffe_body.classList.add("giraffe-body-popup");
   giraffe_head.classList.add("giraffe-head-popup");
   giraffe_ear.classList.add("ear-popup");
-  giraffe_horn1.style.top = "35px";
-  giraffe_horn2.style.top = "35px";
+  // giraffe_horn1.style.top = "35px";
+  // giraffe_horn2.style.top = "35px";
   giraffe_horn1.classList.add("giraffe-horn1-popup");
   giraffe_horn2.classList.add("giraffe-horn2-popup");
 
@@ -32,14 +34,16 @@ let popUp = function() {
 
   setTimeout(function() {
     giraffe_ear.classList.add("ear-loop");
-    giraffe_horn1.style.top = "20px";
-  }, 900);
+    giraffe_horn1.style.top = "18px";
+    giraffe_body.style.top = "50px";
+  }, 1015);
 
   setTimeout(function() {
     input_field.focus();
-    giraffe_container.classList.remove("giraffe-popup");
+    // giraffe_container.classList.remove("giraffe-popup");
+    giraffe_body.classList.remove("giraffe-body-popup");
     giraffe_head.classList.remove("giraffe-head-popup");
-    giraffe_horn2.style.top = "20px";
+    giraffe_horn2.style.top = "18px";
     giraffe_horn1.classList.remove("giraffe-horn1-popup");
     giraffe_horn2.classList.remove("giraffe-horn2-popup");
     giraffe_ear.classList.remove("ear-popup");
