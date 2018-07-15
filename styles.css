@@ -471,7 +471,7 @@ svg {
 @media only screen and (max-height: 600px) {
   .giraffe {
     transform: scale(1);
-    /* bottom: -400px; */
+    bottom: -400px;
     bottom: 0px;
   }
   .searchbar-wrapper {
