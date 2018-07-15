@@ -170,7 +170,6 @@ svg {
 
 .giraffe-body {
   position: absolute;
-  /* top: 50px; */
   top: 50px;
   height: 300px;
   z-index: 2;
@@ -264,7 +263,7 @@ svg {
   -moz-animation: horn-loop 5s infinite;
   -webkit-animation: horn-loop 5s infinite;
   animation: horn-loop 5s infinite;
-  /* animation-delay: -1s */
+  animation-delay: -1s
 }
 
 /*********************** giraffe styles END ***********************/
@@ -316,7 +315,7 @@ svg {
 
 /*     popups     */
 
-/* @keyframes giraffe-popup {
+@keyframes giraffe-popup {
   0% {
     transform: translateY(450px) scale(1.25);
   }
@@ -326,32 +325,20 @@ svg {
   100% {
     transform: translateY(0px) scale(1.25);
   }
-} */
-
-@keyframes giraffe-body-popup {
-  0% {
-    transform: translateY(450px);
-  }
-  70% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
 }
 
 @keyframes giraffe-head-popup {
   0% {
-    transform: translateY(450px) rotateZ(0deg)
+    transform: rotateZ(0deg)
   }
-  /* 30% {
+  30% {
     transform: rotateZ(40deg)
-  } */
+  }
   70% {
-    transform: translateY(-10px) rotateZ(20deg)
+    transform: rotateZ(-20deg)
   }
   100% {
-    transform: translateY(0px) rotateZ(0deg)
+    transform: rotateZ(0deg)
   }
 }
 
@@ -373,48 +360,36 @@ svg {
 
 @keyframes horn-popup {
   0% {
-    transform: translateY(450px);
+    transform: translateY(0px);
   }
   70% {
-    transform: translateY(437px) scale(1.4);
+    transform: translateY(-14px) scale(1.4);
   }
   85% {
-    transform: translateY(434px) scale(0.85);
+    transform: translateY(-16px) scale(0.85);
   }
   100% {
-    transform: translateY(432px) scale(1);
+    transform: translateY(-18px) scale(1);
   }
 }
 
 /*     sinks     */
 
-/* @keyframes giraffe-sinks {
+@keyframes giraffe-sinks {
   20% {
     transform: translateY(-10px) scale(1.25);
   }
   100% {
     transform: translateY(450px) scale(1.25);
   }
-} */
-
-@keyframes giraffe-body-sinks {
-  20% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(450px);
-  }
 }
 
 @keyframes giraffe-head-sinks {
   20% {
-    transform: translateY(-10px) rotateZ(10deg)
-  }
-  60% {
-    transform: translateY(auto) rotateZ(-30deg)
+    transform: rotateZ(10deg)
   }
   100% {
-    transform: translateY(450px) rotateZ(0deg)
+    transform: rotateZ(-30deg)
   }
 }
 
@@ -540,7 +515,7 @@ svg {
   }
 }
 
-@media only screen and (max-height: 400px) {
+/* @media only screen and (max-height: 400px) {
   .giraffe {
     transform: scale(0.8);
     bottom: -400px;
@@ -564,7 +539,7 @@ svg {
     font-size: 1rem;
     height: 2rem;
   }
-  /* keyframes */
+
   @keyframes giraffe-popup {
     0% {
       transform: translateY(400px) scale(0.8);
@@ -584,7 +559,7 @@ svg {
       transform: translateY(400px) scale(0.8);
     }
   }
-}
+} */
 
 @media only screen and (min-height: 960px) {
   .giraffe {

@@ -18,13 +18,12 @@ $('body').css('height', $(window).height() + 'px');
 
 let popUp = function() {
   searchbar.style.top = "10vh";
-  // giraffe_container.classList.add("giraffe-popup");
+  giraffe_container.classList.add("giraffe-popup");
   giraffe_container.style.bottom = "0px";
-  giraffe_body.classList.add("giraffe-body-popup");
   giraffe_head.classList.add("giraffe-head-popup");
   giraffe_ear.classList.add("ear-popup");
-  // giraffe_horn1.style.top = "35px";
-  // giraffe_horn2.style.top = "35px";
+  giraffe_horn1.style.top = "35px";
+  giraffe_horn2.style.top = "35px";
   giraffe_horn1.classList.add("giraffe-horn1-popup");
   giraffe_horn2.classList.add("giraffe-horn2-popup");
 
@@ -40,8 +39,8 @@ let popUp = function() {
 
   setTimeout(function() {
     input_field.focus();
-    // giraffe_container.classList.remove("giraffe-popup");
-    giraffe_body.classList.remove("giraffe-body-popup");
+    giraffe_container.classList.remove("giraffe-popup");
+    // giraffe_body.classList.remove("giraffe-body-popup");
     giraffe_head.classList.remove("giraffe-head-popup");
     giraffe_horn2.style.top = "18px";
     giraffe_horn1.classList.remove("giraffe-horn1-popup");
